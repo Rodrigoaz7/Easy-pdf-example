@@ -1,0 +1,10 @@
+Requirement already satisfied: xhtml2pdf in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages
+Requirement already satisfied: html5lib>=1.0 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: httplib2 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: pyPdf2 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: Pillow in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: reportlab>=3.0 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: six in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from xhtml2pdf)
+Requirement already satisfied: webencodings in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from html5lib>=1.0->xhtml2pdf)
+Requirement already satisfied: pip>=1.4.1 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from reportlab>=3.0->xhtml2pdf)
+Requirement already satisfied: setuptools>=2.2 in c:\users\eject\documents\rodrigo azevedo\pdf\env4pdf\lib\site-packages (from reportlab>=3.0->xhtml2pdf)
