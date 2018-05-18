@@ -16,3 +16,6 @@ from easy_pdf.views import PDFTemplateView
 
 class HelloPDFView(PDFTemplateView):
     template_name = 'templates/index.html'
+
+    def get_context_data(self, *args, **kwargs):
+    	return super(HelloPDFView, self).get_context_data(pagesize="A4 landscape",**kwargs)

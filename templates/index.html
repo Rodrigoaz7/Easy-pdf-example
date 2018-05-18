@@ -1,31 +1,50 @@
 {% extends "easy_pdf/base.html" %}
 {% block extra_style %}
+	<meta charset="UTF-8">
     <style type="text/css">
+    	@page {
+    		margin-left: 1cm;
+            margin-right: 1cm;
+            margin-top: 2.5cm;
+            margin-bottom: 2cm;
+    	}
         body {
-            font-family: "Helvetica", "sans-serif";
+            font-family: "Times New Roman", "sans-serif";
             color: #333333;
         }
         div {
-        	color: blue;
+        	color: black;
         	float: left;
+        }
+        #autenticacaotable td {
+        	border: none;
+        }
+        #autenticacaotable p {
+        	text-align: center;
+        }
+        #header tr {
+        	padding: 1%;
+        }
+        #header {
+        	font-size: 10pt;
         }
     </style>
 {% endblock %}
 
 {% block content %}
-    <div id="content">
-        <h1>Hi there!</h1>
-    </div>
-    <table border="1" cellpadding="12" class="table table-bordered">
+    <table id="header" border="1" cellpadding="12" class="table table-bordered">
     	<tr>
-            <td align="left" valign="center" colspan="3">
-                <h4>HEader</h4>
+            <td align="center" valign="center" colspan="3">
+                <h4>Logo</h4>
             </td>
-            <td align="left" valign="center" colspan="6">
-                <h4>HEader</h4>
+            <td align="center" valign="center" colspan="6">
+                <h3>PRESTAÇÃO DE CONTAS</h3>
+                <h5>RELAÇÃO DE PAGAMENTOS EFETUADOS</h5>
             </td>
-            <td align="left" valign="center" colspan="3">
-                <h4>HEader</h4>
+            <td align="center" valign="center" colspan="3">
+            	<br>
+                <h3>ANEXO</h3>
+                <h1 style="font-size: 20pt;">9</h1>
             </td>
         </tr>
     </table>
@@ -38,6 +57,90 @@
             <td align="left" valign="center" colspan="1"> 2 – UF </td>
             <td align="left" valign="center" colspan="3"> 3 - Nº DO CONVÊNIO / ANO </td>
             <td align="left" valign="center" colspan="3"> 4 - TIPO DE PRESTAÇÃO DE CONTAS </td>
+        </tr>
+    </table>
+
+    <table border="1" cellpadding="12" class="table table-bordered">
+        <tr>
+            <td align="left" valign="center" colspan="3"> 5 - Nº DO PROCESSO DE CONCESSÃO </td>
+            <td align="left" valign="center" colspan="3"> 6 - CNPJ </td>
+            <td align="left" valign="center" colspan="3"> 7 - Nº DE PARCELA </td>
+            <td align="left" valign="center" colspan="3"> 8 - EXERCÍCIO </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1" cellpadding="12" class="table table-bordered">
+        <tr>
+            <td align="center" valign="center" colspan="1"> 9 - Nº DE ORDEM </td>
+            <td align="center" valign="center" colspan="3"> 10 - NOME DO FAVORECIDO / CNPJ OU CPF </td>
+            <td align="center" valign="center" colspan="1"> 11 - LICIT. </td>
+            <td align="center" valign="center" colspan="3">
+            	<table border="0" class="table table-bordered">
+	            	<tr>12 – DOCUMENTO
+	            		<td align="center" valign="center" colspan="1">12.1 - TIPO</td>
+	            		<td align="center" valign="center" colspan="1">12.2 - NÚMERO</td>
+	            		<td align="center" valign="center" colspan="1">12.3 - DATA</td>
+	            	</tr>
+	            </table>
+            </td>
+            <td align="center" valign="center" colspan="4">
+            	<table border="0" class="table table-bordered">
+	            	<tr>13 – PAGAMENTO
+	            		<td align="center" valign="center" colspan="1">13.1 - Nº CH / OB</td>
+	            		<td align="center" valign="center" colspan="1">13.2 - DATA</td>
+	            		<td align="center" valign="center" colspan="1">13.3 – NAT. DESPESA</td>
+	            		<td align="center" valign="center" colspan="1">13.4 – VALOR R$ 1,00</td>
+	            	</tr>
+	            </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="center" colspan="1"> </td>
+            <td align="left" valign="center" colspan="3"> </td>
+            <td align="left" valign="center" colspan="1"> </td>
+            <td align="left" valign="center" colspan="3"> </td>
+            <td align="left" valign="center" colspan="4"> </td>
+        </tr>
+    </table>
+
+    <table border="1" cellpadding="12" class="table table-bordered">
+        <tr>
+        	<td align="left" valign="center" colspan="1"> 14 - TOTAL </td>
+            <td align="left" valign="center" colspan="10">....................... </td>
+            <td align="left" valign="center" colspan="1"> </td>
+        </tr>
+        <tr>
+        	<td align="left" valign="center" colspan="1"> 15 - TOTAL ACUMULADO </td>
+            <td align="left" valign="center" colspan="10">....................... </td>
+            <td align="left" valign="center" colspan="1"> </td>
+        </tr>
+    </table>
+
+    <table border="1" cellpadding="12" class="table table-bordered" id="autenticacaotable">
+        <tr>
+            <td align="left" valign="center" colspan="2"> 
+            	<p>16 – AUTENTICAÇÃO</p>
+            	<p>__/__/____</p>
+            </td>
+            <td align="center" valign="center" colspan="3">________________________________________
+			NOME DO TÉCNICO RESPONSÁVEL PELA EXECUÇÃO
+ 			</td>
+            <td align="center" valign="center" colspan="4"> 
+            ____________________________________________________
+			NOME DO RESPONSÁVEL PELA PRESTAÇÃO DE CONTAS
+            </td>
+            <td align="center" valign="center" colspan="3"> 
+            _________________________________________
+			NOME DO DIRIGENTE OU DO SEU REPRESENTANTE LEGAL
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="center" colspan="2"> </td>
+            <td align="left" valign="center" colspan="3"> </td>
+            <td align="left" valign="center" colspan="4"> </td>
+            <td align="left" valign="center" colspan="3"> </td>
         </tr>
     </table>
 {% endblock %}
