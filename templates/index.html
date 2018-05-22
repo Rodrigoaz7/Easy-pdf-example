@@ -19,6 +19,9 @@
         #autenticacaotable td {
         	border: none;
         }
+        #autenticacaotable tr {
+            border: none;
+        }
         #autenticacaotable p {
         	text-align: center;
         }
@@ -44,7 +47,7 @@
             <td align="center" valign="center" colspan="3">
             	<br>
                 <h3>ANEXO</h3>
-                <h1 style="font-size: 20pt;">9</h1>
+                <h1>9</h1>
             </td>
         </tr>
     </table>
@@ -53,19 +56,43 @@
     
     <table border="1" cellpadding="12" class="table table-bordered">
         <tr>
-            <td align="left" valign="center" colspan="5"> 1 - NOME DO ÓRGÃO OU ENTIDADE CONVENENTE </td>
-            <td align="left" valign="center" colspan="1"> 2 – UF </td>
-            <td align="left" valign="center" colspan="3"> 3 - Nº DO CONVÊNIO / ANO </td>
-            <td align="left" valign="center" colspan="3"> 4 - TIPO DE PRESTAÇÃO DE CONTAS </td>
+            <td align="left" valign="center" colspan="5"> 
+                1 - NOME DO ÓRGÃO OU ENTIDADE CONVENENTE 
+                <p>{{ nome_orgao }}</p>
+            </td>
+            <td align="left" valign="center" colspan="1"> 
+                2 – UF 
+                <p>{{ uf }}</p>
+            </td>
+            <td align="left" valign="center" colspan="3"> 
+                3 - Nº DO CONVÊNIO / ANO 
+                <p>{{ num_convenio }}</p>
+            </td>
+            <td align="left" valign="center" colspan="3"> 
+                4 - TIPO DE PRESTAÇÃO DE CONTAS
+                <p>{{ tipo }}</p>
+            </td>
         </tr>
     </table>
 
     <table border="1" cellpadding="12" class="table table-bordered">
         <tr>
-            <td align="left" valign="center" colspan="3"> 5 - Nº DO PROCESSO DE CONCESSÃO </td>
-            <td align="left" valign="center" colspan="3"> 6 - CNPJ </td>
-            <td align="left" valign="center" colspan="3"> 7 - Nº DE PARCELA </td>
-            <td align="left" valign="center" colspan="3"> 8 - EXERCÍCIO </td>
+            <td align="left" valign="center" colspan="3"> 
+                5 - Nº DO PROCESSO DE CONCESSÃO 
+                <p>{{ num_processo }}</p>
+            </td>
+            <td align="left" valign="center" colspan="3">
+                 6 - CNPJ 
+                <p>{{ cnpj }}</p>
+             </td>
+            <td align="left" valign="center" colspan="3"> 
+                7 - Nº DE PARCELA 
+                <p>{{ num_parcela }}</p>
+            </td>
+            <td align="left" valign="center" colspan="3"> 
+                8 - EXERCÍCIO 
+                <p>{{ exercicio }}</p>
+            </td>
         </tr>
     </table>
 
@@ -73,9 +100,18 @@
 
     <table border="1" cellpadding="12" class="table table-bordered">
         <tr>
-            <td align="center" valign="center" colspan="1"> 9 - Nº DE ORDEM </td>
-            <td align="center" valign="center" colspan="3"> 10 - NOME DO FAVORECIDO / CNPJ OU CPF </td>
-            <td align="center" valign="center" colspan="1"> 11 - LICIT. </td>
+            <td align="center" valign="center" colspan="1"> 
+            9 - Nº DE ORDEM 
+            <p></p>
+            </td>
+            <td align="center" valign="center" colspan="3"> 
+                10 - NOME DO FAVORECIDO / CNPJ OU CPF 
+                <p></p>
+            </td>
+            <td align="center" valign="center" colspan="1"> 
+                11 - LICIT. 
+                <p></p>
+            </td>
             <td align="center" valign="center" colspan="3">
             	<table border="0" class="table table-bordered">
 	            	<tr>12 – DOCUMENTO
@@ -124,11 +160,12 @@
             	<p>16 – AUTENTICAÇÃO</p>
             	<p>__/__/____</p>
             </td>
-            <td align="center" valign="center" colspan="3">________________________________________
+            <td align="center" valign="center" colspan="3">
+            ________________________________________
 			NOME DO TÉCNICO RESPONSÁVEL PELA EXECUÇÃO
  			</td>
             <td align="center" valign="center" colspan="4"> 
-            ____________________________________________________
+            __________________________________________________________
 			NOME DO RESPONSÁVEL PELA PRESTAÇÃO DE CONTAS
             </td>
             <td align="center" valign="center" colspan="3"> 
@@ -137,10 +174,19 @@
             </td>
         </tr>
         <tr>
-            <td align="left" valign="center" colspan="2"> </td>
-            <td align="left" valign="center" colspan="3"> </td>
-            <td align="left" valign="center" colspan="4"> </td>
-            <td align="left" valign="center" colspan="3"> </td>
+            <td align="left" valign="center" colspan="2"></td>
+            <td align="center" valign="center" colspan="3">
+            ________________________________________
+            ASSINATURA DO TÉCNICO RESPONSÁVEL PELA EXECUÇÃO
+            </td>
+            <td align="center" valign="center" colspan="4"> 
+            __________________________________________________________
+            ASSINATURA DO RESPONSÁVEL PELA PRESTAÇÃO DE CONTAS
+            </td>
+            <td align="center" valign="center" colspan="3"> 
+            _________________________________________
+            ASSINATURA DO DIRIGENTE OU SEU REPRESENTANTE LEGAL 
+            </td>
         </tr>
     </table>
 {% endblock %}
